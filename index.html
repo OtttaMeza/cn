@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PLAN DE MEJORAMIENTO EMPRESARIAL</title>
+	<!-- LIBRERIAS BOOTSTRAP !-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css">
+	<script src="bootstrap-4.0.0-dist/js/jquery-3.3.1.min.js"></script>
+	<script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+	<link href="./Floating labels example for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="./Floating labels example for Bootstrap_files/floating-labels.css" rel="stylesheet">
+
+	<!-- ESTILOS PROPIOS !-->
+	<link rel="stylesheet" type="text/css" href="EstilosCss/EstiloInicio.css">
+	<link rel="stylesheet" type="text/css" href="EstilosCss/w3.css">
+	<script src="Operaciones/js/funciones.js"></script>
+
+	<script src="librerias/alertifyjs/alertify.js"></script>
+    <link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/alertify.css">
+    <link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/themes/default.css">
+
+	<!-- NO CACHE EN LOS BUSCADORES !-->
+		<meta charset="utf-8">     
+        <meta http-equiv="Expires" content="0">
+        <meta http-equiv="Last-Modified" content="0">
+        <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+        <meta http-equiv="Pragma" content="no-cache"> 
+
+        <style>
+        	.fondo{background-color: red;  	} 
+        	.colr{background-color: blue;}      
+        	.borde{border-style: double; box-sizing: border-box; margin: 0 auto;} 	
+        	.centrar{text-align: center;}
+				
+				html,body{
+			margin:0px;
+			height:100%;
+			}
+			    	
+        </style>
+
+</head>
+<body>
+<div class="container-fluid" style="height: 100%;">
+			
+			<div class="row justify-content-center" style="background-color: #343a40;">
+				<div class="col-xs-4 col-md-4 col-sm-12 col-lg-3 text-center pt-1" style="padding-bottom: 10px;"><img  style=" height: 55px; " src="imagenes/indice.png"></div>
+				<div class="col-xs-8 col-md-8 col-sm-12 col-lg-9 pt-1"><h2 id="titulo" >INGRESO A DIAGNOSTICO</h2></div>			
+			</div>	
+
+
+				<div class="row justify-content-center text-center " style="padding-top: 30px;">			
+					<div class="col-sm-6 col-md-6 col-lg-5 " >
+						<img style="border-radius: 40px;" src="imagenes/inicio1.png" class="col-sm-12 col-md-12 col-lg-12">
+					</div>
+
+					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
+
+						<form action="Operaciones/InicioSesion.php" method="POST" class="form-signin ">
+						<div class="row justify-content-center">					
+							<div class="col-lg-12 col-sm-12 col-md-12 form-label-group">
+								<h3 id="usuario" >Usuario</h3>
+		           				<input class="form-control" id="user" name="user" type="text" placeholder="Nit Empresa" required=""> 
+
+							</div>
+							<div class="col-lg-12 col-sm-12 col-md-12">
+								<h3 id="contra">Contraseña</h3>                     
+		           				<input class="form-control" id="pass" name="pass" type="password" placeholder="Password" required="">
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-2">
+								
+								<div id="olvido"><a href="http://www.google.com">Olvidaste tu Contraseña .?</a></div>
+							</div>
+
+							<div class="container-fluid ">
+								<hr>
+								<div class="row justify-content-center">
+									<div class=" p-3 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12  text-center p-1">
+										<input type="button"  class="btn btn-outline-success btn-block btn-lg" value="Iniciar Sesion" onclick="iniciosesion();" >
+									</div>
+		            				
+								</div>
+								
+							</div>
+						</div>
+						</form>
+					</div>
+
+					
+					
+				</div>
+
+			          
+
+
+	
+</div>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+	
+	function iniciosesion(){
+		var user=document.getElementById('user').value;
+		var pass=document.getElementById('pass').value;
+
+		validarLogin(user,pass);
+	}
+</script>
